@@ -1,4 +1,5 @@
 # Problem comes from https://www.codewars.com/kata/5277c8a221e209d3f6000b56
+# Completed Tuesday May 10th, 2022
 
 """
 TLDR: Read in a string of braces (), [], and {}. If the string is valid, return true, otherwise return false.
