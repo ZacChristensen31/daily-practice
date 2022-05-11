@@ -1,4 +1,4 @@
-# Problem comes from https://www.codewars.com/kata/5277c8a221e209d3f6000b56
+# Problem comes from Code Wars https://www.codewars.com/kata/5277c8a221e209d3f6000b56
 # Completed Tuesday May 10th, 2022
 
 """

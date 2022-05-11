@@ -1,4 +1,4 @@
-# Problem comes from https://leetcode.com/problems/count-sorted-vowel-strings/
+# Problem comes from LeetCode https://leetcode.com/problems/count-sorted-vowel-strings/
 # Completed Tuesday May 10th, 2022
 
 def solve(n: int) -> int:
