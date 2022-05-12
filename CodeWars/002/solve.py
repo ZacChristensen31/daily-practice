@@ -9,12 +9,17 @@ from typing import List
 
 
 def solve(a: List[int] or None, b: List[int] or None) -> bool:
+    if a == [] and b == []:
+        return True
     if not a or not b:
         return False
-    return [x * x for x in sorted(a)] == sorted(b)
+    if len(a) != len(b):
+        return False
+    return sorted([x * x for x in sorted(a)]) == sorted(b)
 
 
 if __name__ == '__main__':
     assert solve([121, 144, 19, 161, 19, 144, 19, 11], [121, 14641, 20736, 361, 25921, 361, 20736, 361]) is True
     assert solve(None, []) is False
     assert solve([121, 144, 19, 161, 19, 144, 19, 11], [132, 14641, 20736, 361, 25921, 361, 20736, 361]) is False
+    assert solve([-121, -144, 19, -161, 19, -144, 19, -11], [121, 14641, 20736, 361, 25921, 361, 20736, 361]) is True
