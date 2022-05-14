@@ -23,19 +23,21 @@ def bfs(edges: List[List[int]], start: int, end: int) -> Tuple[int, List[int]]:
 
     # Create a queue of paths to explore
     queue = [[start]]
+    visited = [start]
 
     while queue:
         current_path = queue.pop(0)
         current_node = current_path[-1]
 
         if current_node == end:
-            print('Current Path', current_path)
             return len(current_path) - 1, current_path
 
-        for edge in graph.get(current_node, []):
-            next_path = list(current_path)
-            next_path.append(edge)
-            queue.append(next_path)
+        for next_node in graph.get(current_node, []):
+            if next_node not in visited:
+                visited.append(next_node)
+                next_path = list(current_path)
+                next_path.append(next_node)
+                queue.append(next_path)
 
     return -1, []
 
