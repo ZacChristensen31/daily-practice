@@ -1,4 +1,4 @@
-# Problem comes from LeetCodehttps://leetcode.com/problems/sort-array-by-parity/submissions/
+# Problem comes from LeetCode https://leetcode.com/problems/sort-array-by-parity/submissions/
 # Solved on Wednesday May 18, 2022
 
 from typing import List
