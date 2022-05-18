@@ -2,12 +2,7 @@
 # Solved on Sunday May 15th, 2022
 from typing import Optional, Tuple
 
-
-class TreeNode:
-    def __init__(self, val, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+from GeneralAlgorithms.Tree.tree import TreeNode
 
 
 def nifty_solve(root: Optional[TreeNode]) -> int:
