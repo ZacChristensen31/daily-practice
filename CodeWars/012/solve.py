@@ -1,5 +1,5 @@
 # Problem comes from CodeWars https://www.codewars.com/kata/546dba39fa8da224e8000467/python
-# Solved on Friday May 20th, 2022
+# Solved on Saturday May 21st, 2022
 
 from typing import List
 
