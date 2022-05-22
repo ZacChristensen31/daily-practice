@@ -18,13 +18,13 @@ def solve(p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
 if __name__ == '__main__':
     a = Tree([1, 2, 3, 4, 5, 6, 7])
     b = Tree([1, 2, 3, 4, 5, 6, 7])
-    assert solve(a.root, b.root) == True
+    assert solve(a.root, b.root) is True
 
     c = Tree([1, 2, 3, 4, 5])
     d = Tree([1, 2, 3, 5, 4])
-    assert solve(c.root, d.root) == False
+    assert solve(c.root, d.root) is False
 
     e = Tree([1, 2, 3])
     f = Tree([1, 2, 3, 4])
-    assert solve(e.root, f.root) == False
+    assert solve(e.root, f.root) is False
 
