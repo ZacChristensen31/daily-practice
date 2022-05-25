@@ -10,8 +10,21 @@ from typing import List
 
 
 def solve(nums: List[str], m: int, n: int) -> int:
-    pass
+    # Set up a dp storing max number of ones and zeros
+    dp = [[0] * (n + 1) for _ in range(m + 1)]
+
+    # Extract the number of ones and zeros from each string
+    counts = [[x.count('0'), x.count('1')] for x in nums]
+
+    # Loop through each of the counts
+    for zero, one in counts:
+        for i in range(m, zero - 1, -1):
+            for j in range(n, one - 1, -1):
+                dp[i][j] = max(dp[i][j], 1 + dp[i - zero][j - one])
+
+    return dp[-1][-1]
 
 
 if __name__ == '__main__':
-    pass
+    assert solve(["10", "0001", "111001", "1", "0"], 5, 3) == 4
+    assert solve(["10", "0", "1"], 1, 1) == 2
